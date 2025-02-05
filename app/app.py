@@ -30,63 +30,54 @@ def set_bg_image(image_path):
 # Set the local background image (replace with your image file path)
 set_bg_image("images/background_image.jpg")  # Local path to your image
 
-# Sidebar navigation with enhanced styling
+# Sidebar navigation
 st.sidebar.title("Navigation")
+page = st.sidebar.radio("Select a Page", ["Home", "Medical Charges Prediction", "About"])
+
+# Customizing the sidebar using markdown and CSS (only for sidebar)
 st.sidebar.markdown("""
     <style>
-        /* Sidebar container styling */
+        /* Sidebar Container */
         .stSidebar {
-            background-color: #f7f9fc; /* Light background */
+            background-color: #f7f9fc; /* Light background for a clean look */
             border-radius: 12px; /* Rounded corners */
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
             padding: 15px;
         }
-        /* Title styling */
-        .sidebar-title {
-            font-size: 24px;
+
+        /* Sidebar Title */
+        .stSidebar .sidebar-title {
+            font-size: 24px; /* Larger font for title */
             font-weight: bold;
-            color: #00796b;
+            color: #00796b; /* Dark teal color */
             margin-bottom: 20px;
         }
-        /* Box for navigation items */
-        .nav-box {
-            background-color: #e0f7fa;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
-        }
-        /* Styling for navigation items */
+
+        /* Navigation Links */
         .stRadio > label {
             display: block;
-            margin: 10px 0;
+            margin: 8px 0; /* Space between items */
             padding: 10px;
-            font-size: 18px; /* Larger font */
+            border-radius: 6px; /* Rounded corners for links */
+            font-size: 18px; /* Larger font for better readability */
             font-weight: 500;
-            color: #00574b; /* Text color */
-            border: 1px solid #b2ebf2; /* Box border */
-            border-radius: 6px; /* Rounded corners */
-            transition: all 0.3s ease;
-            text-align: center; /* Center text */
+            color: #00574b; /* Slightly darker teal for link text */
+            background-color: #e0f7fa; /* Light teal background */
+            transition: all 0.3s ease; /* Smooth hover effect */
         }
-        /* Hover and active states */
+
+        /* Hover and Active States */
         .stRadio > label:hover {
-            background-color: #00796b;
-            color: white;
+            background-color: #00796b; /* Dark teal on hover */
+            color: white; /* White text on hover */
         }
         .stRadio > label[data-selected="true"] {
-            background-color: #00796b;
-            color: white;
-            font-weight: bold;
+            background-color: #00796b; /* Dark teal for active */
+            color: white; /* White text for active */
+            font-weight: bold; /* Highlight active link */
         }
     </style>
-    <div class="nav-box">
-        <div class="stRadio">
-            <!-- Placeholder for Streamlit radio -->
-        </div>
-    </div>
 """, unsafe_allow_html=True)
-
-# Create a radio button for navigation
-page = st.sidebar.radio("Select a Page", ["Home", "Medical Charges Prediction", "About"])
 
 # Display pages based on selection
 if page == "Home":
@@ -106,7 +97,7 @@ elif page == "Medical Charges Prediction":
     # User input form with validation
     age = st.number_input("Age", min_value=0, max_value=100, step=1, value=18)
     sex = st.selectbox("Sex", ["male", "female"])
-    bmi = st.number_input("BMI", min_value=10.0, max_value=50.0, step=0.1, value=20.0)
+    bmi = st.number_input("BMI", min_value=10.0, max_value=50.0, step=0.1, )
     children = st.number_input("Number of Children", min_value=0, max_value=10, step=1)
     smoker = st.selectbox("Smoker", ["yes", "no"])
     region = st.selectbox("Region", ["northeast", "northwest", "southeast", "southwest"])
