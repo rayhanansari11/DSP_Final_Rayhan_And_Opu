@@ -3,8 +3,8 @@ import pandas as pd
 import joblib
 
 # Load the model and preprocessor
-model = joblib.load("C:/Users/Rayhan/OneDrive/Desktop/final project for dsp/src/models/final_model.pkl")
-preprocessor = joblib.load("C:/Users/Rayhan/OneDrive/Desktop/final project for dsp/src/models/preprocessor.pkl")
+model = joblib.load("C:/Users/Rayhan/OneDrive/Desktop/final project for dsp/models/final_model.pkl")
+preprocessor = joblib.load("C:/Users/Rayhan/OneDrive/Desktop/final project for dsp/models/preprocessor.pkl")
 
 st.title("Medical Charges Prediction App")
 
