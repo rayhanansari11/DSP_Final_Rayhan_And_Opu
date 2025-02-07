@@ -26,5 +26,9 @@ def build_preprocessor():
             ("cat", categorical_transformer, categorical_features)
         ]
     )
-
+    
     return preprocessor
+# In this part of our work we build some function so that we can preprocess our data. We will use this function in our model building part.
+# This function will be used to preprocess the data before training the model.
+# The function will be used to preprocess the data before making predictions with the model.
+# By using this we avoid some of manual work and it will be easy to use this function in our model building part.
