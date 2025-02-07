@@ -165,7 +165,7 @@ elif page == "About":
     # About the app content
     st.write("""
         This app uses machine learning to predict Medical Insurance Charges based on the patient's data.
-        The model was trained on real insurance data, and it takes into account factors like age, 
+        The model was trained on insurance data collected from kaggle, and it takes into account factors like age, 
         BMI, smoking habits, and more to estimate the Medical Insurance Charges.
         
         **Features:**
