@@ -91,16 +91,16 @@ page = st.sidebar.radio("Select a Page", ["Home", "Medical Charges Prediction", 
 # Display pages based on selection
 if page == "Home":
     # Home page content
-    st.title("Welcome to the Medical Charges Prediction App")
+    st.title("Welcome to the Medical Insurance Charges Estimation App")
     st.write("""
         This is a simple app where you can predict the medical charges for a patient based on 
         their medical information. 
         Navigate through the pages using the sidebar to learn more or make a prediction.
     """)
 
-elif page == "Medical Charges Prediction":
+elif page == "Medical Insurance Charges Estimation":
     # Main page: Medical Charges Prediction form
-    st.title("Medical Charges Prediction App")
+    st.title("Medical Insurance Charges Estimation App")
     st.header("Input Patient Data")
     
     # User input form with validation
@@ -134,10 +134,10 @@ elif page == "Medical Charges Prediction":
             prediction = model.predict(input_data_preprocessed)
 
             # Display result
-            st.success(f"Predicted Medical Charges: ${prediction[0]:.2f}")
+            st.success(f"Predicted Medical Insurance Charges : ${prediction[0]:.2f}")
             
             # Add a chart for interactivity (example)
-            st.subheader("Medical Charges based on Age")
+            st.subheader("Medical Insurance Charges based on Age")
             charges_data = {
                 'age': [30, 40, 50, 60, 70],
                 'charges': [1200, 2000, 2500, 3000, 3500]  # Example charges
@@ -164,8 +164,8 @@ elif page == "About":
     
     # About the app content
     st.write("""
-        This app uses machine learning to predict medical charges based on the patient's data.
-        The model was trained on real insurance data, and it takes into account factors like age, 
+        This app uses machine learning to predict Medical Insurance Charges based on the patient's data.
+        The model was trained on real insurance data collected from kaggle, and it takes into account factors like age, 
         BMI, smoking habits, and more to estimate the medical charges.
         
         **Features:**
