@@ -91,16 +91,16 @@ page = st.sidebar.radio("Select a Page", ["Home", "Medical Charges Prediction", 
 # Display pages based on selection
 if page == "Home":
     # Home page content
-    st.title("Welcome to the Medical Insurance Charges Estimation App")
+    st.title("Welcome to the Medical Insurance Charges Prediction App")
     st.write("""
         This is a simple app where you can predict the medical charges for a patient based on 
         their medical information. 
         Navigate through the pages using the sidebar to learn more or make a prediction.
     """)
 
-elif page == "Medical Insurance Charges Estimation":
+elif page == "Medical Insurance Charges Prediction ":
     # Main page: Medical Charges Prediction form
-    st.title("Medical Insurance Charges Estimation App")
+    st.title("Medical Insurance Charges Prediction App")
     st.header("Input Patient Data")
     
     # User input form with validation
